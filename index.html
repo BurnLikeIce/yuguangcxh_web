@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>崔小虎 | 屿光 - 36x.ai联合创始人</title>
+    <title id="site-title">崔小虎 | 屿光 - 36x.ai联合创始人</title>
+    <script src="config.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Orbitron:wght@400;500;600;700&family=Ma+Shan+Zheng&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
@@ -275,6 +276,7 @@
             .hero-bg-photos {
                 height: 60vh;
                 padding: 0 2%;
+                padding-top: 80px;
             }
 
             .hero-bg-photo {
@@ -294,7 +296,8 @@
             }
 
             .hero-badge-container {
-                top: 42vh;
+                top: calc(28vh + 60px);
+                z-index: 20;
             }
 
             .hero-bottom-fade {
@@ -303,7 +306,7 @@
 
             .hero-content {
                 width: 92%;
-                margin-top: 58vh;
+                margin-top: 68vh;
                 padding: 20px 20px 30px;
                 border-radius: 20px;
             }
@@ -1002,14 +1005,8 @@
 
     <!-- 导航 -->
     <nav>
-        <div class="logo">屿光</div>
-        <div class="nav-links" id="navLinks">
-            <a href="#about">关于我</a>
-            <a href="#hobbies">爱好</a>
-            <a href="#works">正在做</a>
-            <a href="#services">能帮你</a>
-            <a href="#contact">联系我</a>
-        </div>
+        <div class="logo" id="logo">屿光</div>
+        <div class="nav-links" id="navLinks"></div>
         <div class="mobile-menu-btn" id="mobileMenuBtn">
             <span></span>
             <span></span>
@@ -1034,7 +1031,7 @@
 
         <!-- Badge - 放在照片区域下半部分 -->
         <div class="hero-badge-container">
-            <div class="hero-badge">AI × 心理学 × 魔术</div>
+            <div class="hero-badge" id="hero-badge">AI × 心理学 × 魔术</div>
         </div>
 
         <!-- 底部渐变过渡 -->
@@ -1042,204 +1039,69 @@
 
         <!-- 文字内容 - 在照片下方显示 -->
         <div class="hero-content">
-            <h1><span class="name-badge"><span class="gradient-text">崔小虎 <span class="name-separator">/</span> 屿光</span></span></h1>
-            <p class="subtitle">用AI探索未来，用魔术治愈心灵</p>
-            <div class="hero-tags">
-                <span class="hero-tag primary">36x.ai联合创始人</span>
-                <span class="hero-tag">心理咨询师</span>
-                <span class="hero-tag">魔术师</span>
-            </div>
+            <h1><span class="name-badge"><span class="gradient-text" id="hero-name">崔小虎 <span class="name-separator">/</span> 屿光</span></span></h1>
+            <p class="subtitle" id="hero-subtitle">用AI探索未来，用魔术治愈心灵</p>
+            <div class="hero-tags" id="hero-tags"></div>
         </div>
     </section>
 
     <!-- 关于我 -->
     <section id="about">
         <div class="section-header reveal">
-            <h2><span class="icon">👤</span>关于我</h2>
-            <p>一些基本信息</p>
+            <h2 id="about-title"><span class="icon">👤</span>关于我</h2>
+            <p id="about-subtitle">一些基本信息</p>
         </div>
-        <div class="info-grid">
-            <div class="info-card reveal">
-                <div class="label">笔名</div>
-                <div class="value">屿光</div>
-            </div>
-            <div class="info-card reveal">
-                <div class="label">年龄</div>
-                <div class="value">27岁</div>
-            </div>
-            <div class="info-card reveal">
-                <div class="label">MBTI</div>
-                <div class="value">INTJ</div>
-            </div>
-            <div class="info-card reveal">
-                <div class="label">主业</div>
-                <div class="value">AI公司联合创始人</div>
-            </div>
-            <div class="info-card reveal">
-                <div class="label">家乡</div>
-                <div class="value">甘肃金昌</div>
-            </div>
-            <div class="info-card reveal">
-                <div class="label">现居</div>
-                <div class="value">📍 浙江杭州</div>
-            </div>
-        </div>
+        <div class="info-grid" id="about-grid"></div>
     </section>
 
     <!-- 爱好 -->
     <section id="hobbies">
         <div class="section-header reveal">
-            <h2><span class="icon">💟</span>我的爱好</h2>
-            <p>热爱让生活更有意义</p>
+            <h2 id="hobbies-title"><span class="icon">💟</span>我的爱好</h2>
+            <p id="hobbies-subtitle">热爱让生活更有意义</p>
         </div>
-        <div class="hobby-grid">
-            <div class="hobby-card reveal">
-                <span class="hobby-icon">🤖</span>
-                <h3>AI 人工智能</h3>
-                <p>时刻关注AI最新动态，热衷于体验新AI产品，探索AI的无限可能</p>
-            </div>
-            <div class="hobby-card reveal">
-                <span class="hobby-icon">❤️</span>
-                <h3>心理学</h3>
-                <p>中科院心理所认证心理咨询师，用专业知识帮助自己和他人</p>
-            </div>
-            <div class="hobby-card reveal">
-                <span class="hobby-icon">🃏</span>
-                <h3>魔术</h3>
-                <p>心灵魔术师，JF流派催眠师，用魔术创造奇迹</p>
-            </div>
-        </div>
+        <div class="hobby-grid" id="hobbies-grid"></div>
     </section>
 
     <!-- 正在做的事 -->
     <section id="works" style="background: linear-gradient(to bottom, transparent, rgba(6, 182, 212, 0.03));">
         <div class="section-header reveal">
-            <h2><span class="icon">🏃</span>正在做的事</h2>
-            <p>保持前行，永不止步</p>
+            <h2 id="works-title"><span class="icon">🏃</span>正在做的事</h2>
+            <p id="works-subtitle">保持前行，永不止步</p>
         </div>
-        <div class="work-masonry">
-            <div class="work-card reveal">
-                <span class="work-number">01</span>
-                <h3>🚀 36x.ai 联合创始人</h3>
-                <p>主营toB的AI决策平台、企业AI化升级咨询、AI编程课程。拥有杭州多个职校资源，开展校企合作项目，负责学生就业教育培训辅导，同时推进世界模型项目。</p>
-                <span class="work-tag">主业</span>
-            </div>
-            <div class="work-card reveal">
-                <span class="work-number">02</span>
-                <h3>✍️ 个人品牌探索</h3>
-                <p>运营公众号《屿光同行》，记录自己的想法和感悟，与更多人分享成长路上的思考。</p>
-                <span class="work-tag">创作</span>
-            </div>
-            <div class="work-card reveal">
-                <span class="work-number">03</span>
-                <h3>🎭 魔术疗愈秀筹备</h3>
-                <p>将心理学融入魔术，筹备个人魔术疗愈秀，正在寻找合作方，希望用独特的方式治愈心灵。</p>
-                <span class="work-tag">创新项目</span>
-            </div>
-            <div class="work-card reveal">
-                <span class="work-number">04</span>
-                <h3>🤝 社交与连接</h3>
-                <p>积极参加各类活动，广交朋友，不断扩大交际圈和人脉，持续提升社交能力。</p>
-                <span class="work-tag">成长</span>
-            </div>
-            <div class="work-card reveal">
-                <span class="work-number">05</span>
-                <h3>🌟 帮助迷茫的年轻人</h3>
-                <p>想要帮助在大城市的迷茫年轻人疗愈内心，找到未来方向，用AI赋能成为超级个体。</p>
-                <span class="work-tag">使命</span>
-            </div>
-        </div>
+        <div class="work-masonry" id="works-grid"></div>
     </section>
 
     <!-- 我能提供 -->
     <section id="services">
         <div class="section-header reveal">
-            <h2><span class="icon">🔈</span>我能提供</h2>
-            <p>也许这些对你有帮助</p>
+            <h2 id="services-title"><span class="icon">🔈</span>我能提供</h2>
+            <p id="services-subtitle">也许这些对你有帮助</p>
         </div>
-        <div class="service-grid">
-            <div class="service-card reveal">
-                <div class="service-icon">🤖</div>
-                <h3>AI 服务</h3>
-                <p>AI相关知识分享、课程培训、企业AI化咨询</p>
-            </div>
-            <div class="service-card reveal">
-                <div class="service-icon">🎓</div>
-                <h3>学生资源</h3>
-                <p>高职院校学生资源对接，校企合作机会</p>
-            </div>
-            <div class="service-card reveal">
-                <div class="service-icon">❤️</div>
-                <h3>心理咨询</h3>
-                <p>个人成长、原生家庭方面的心理咨询与疗愈</p>
-            </div>
-            <div class="service-card reveal">
-                <div class="service-icon">🃏</div>
-                <h3>魔术服务</h3>
-                <p>魔术活动表演、商业演出、魔术教学</p>
-            </div>
-        </div>
+        <div class="service-grid" id="services-grid"></div>
     </section>
 
     <!-- 个人性格 -->
     <section style="background: linear-gradient(to bottom, rgba(6, 182, 212, 0.03), transparent);">
         <div class="section-header reveal">
-            <h2><span class="icon">💎</span>我的价值观</h2>
-            <p>真诚 · 情绪稳定 · 温柔 · 有亲和力</p>
+            <h2 id="values-title"><span class="icon">💎</span>我的价值观</h2>
+            <p id="values-subtitle">真诚 · 情绪稳定 · 温柔 · 有亲和力</p>
         </div>
-        <div class="values-cloud">
-            <span class="value-tag reveal">真诚待人</span>
-            <span class="value-tag reveal">情绪稳定</span>
-            <span class="value-tag reveal">温柔细腻</span>
-            <span class="value-tag reveal">有亲和力</span>
-            <span class="value-tag reveal">全面考虑</span>
-            <span class="value-tag reveal">追求自由</span>
-            <span class="value-tag reveal">平等尊重</span>
-            <span class="value-tag reveal">持续成长</span>
-        </div>
+        <div class="values-cloud" id="values-cloud"></div>
     </section>
 
     <!-- 联系方式 -->
     <section id="contact" class="contact-section">
         <div class="section-header reveal">
-            <h2><span class="icon">📮</span>联系我</h2>
-            <p>欢迎交流与合作</p>
+            <h2 id="contact-title"><span class="icon">📮</span>联系我</h2>
+            <p id="contact-subtitle">欢迎交流与合作</p>
         </div>
-        <div class="contact-grid">
-            <div class="contact-card reveal" onclick="toggleQR('wechat-qr', event)">
-                <div class="contact-icon">💬</div>
-                <h3>微信号</h3>
-                <p>yug-xh</p>
-                <span class="qr-toggle-hint">点击查看二维码</span>
-                <div class="qr-content" id="wechat-qr" onclick="event.stopPropagation()">
-                    <img src="image/QR1.png" alt="微信二维码">
-                    <p>长按二维码识别</p>
-                    <span class="qr-close-hint" onclick="toggleQR('wechat-qr', event)">点击收起</span>
-                </div>
-            </div>
-            <div class="contact-card reveal" onclick="copyToClipboard('xhcui05292022@163.com', '邮箱')">
-                <div class="contact-icon">📧</div>
-                <h3>邮箱</h3>
-                <p>xhcui05292022@163.com</p>
-                <span class="copy-hint">点击复制</span>
-            </div>
-            <div class="contact-card reveal" onclick="toggleQR('gzh-qr', event)">
-                <div class="contact-icon">📱</div>
-                <h3>公众号</h3>
-                <p>屿光同行</p>
-                <span class="qr-toggle-hint">点击查看二维码</span>
-                <div class="qr-content" id="gzh-qr" onclick="event.stopPropagation()">
-                    <img src="image/QR2.jpg" alt="公众号二维码">
-                    <p>长按二维码识别</p>
-                    <span class="qr-close-hint" onclick="toggleQR('gzh-qr', event)">点击收起</span>
-                </div>
-            </div>
-        </div>
+        <div class="contact-grid" id="contact-grid"></div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>Made with <span class="heart">❤️</span> by 屿光 | 2025</p>
+        <p id="footer-text">Made with <span class="heart">❤️</span> by 屿光 | 2025</p>
     </footer>
 
     <!-- Toast 提示 -->
@@ -1482,6 +1344,130 @@
                 animateParticles();
             }
         });
+
+        // 动态加载配置文件内容
+        function loadConfig() {
+            // 网站标题
+            document.title = CONFIG.site.title;
+            document.getElementById('site-title').textContent = CONFIG.site.title;
+
+            // Logo
+            document.getElementById('logo').textContent = CONFIG.logo;
+
+            // 导航链接
+            const navLinks = document.getElementById('navLinks');
+            navLinks.innerHTML = CONFIG.nav.links.map(link => 
+                `<a href="#${link.id}">${link.text}</a>`
+            ).join('');
+
+            // Hero 区域
+            document.getElementById('hero-badge').textContent = CONFIG.hero.badge;
+            document.getElementById('hero-name').innerHTML = `${CONFIG.hero.name} <span class="name-separator">${CONFIG.hero.separator}</span> ${CONFIG.hero.alias}`;
+            document.getElementById('hero-subtitle').textContent = CONFIG.hero.subtitle;
+            document.getElementById('hero-tags').innerHTML = CONFIG.hero.tags.map(tag => 
+                `<span class="hero-tag${tag.primary ? ' primary' : ''}">${tag.text}</span>`
+            ).join('');
+
+            // 关于我
+            document.getElementById('about-title').innerHTML = `<span class="icon">${CONFIG.about.icon}</span>${CONFIG.about.title}`;
+            document.getElementById('about-subtitle').textContent = CONFIG.about.subtitle;
+            document.getElementById('about-grid').innerHTML = CONFIG.about.info.map(item => `
+                <div class="info-card reveal">
+                    <div class="label">${item.label}</div>
+                    <div class="value">${item.value}</div>
+                </div>
+            `).join('');
+
+            // 爱好
+            document.getElementById('hobbies-title').innerHTML = `<span class="icon">${CONFIG.hobbies.icon}</span>${CONFIG.hobbies.title}`;
+            document.getElementById('hobbies-subtitle').textContent = CONFIG.hobbies.subtitle;
+            document.getElementById('hobbies-grid').innerHTML = CONFIG.hobbies.items.map(item => `
+                <div class="hobby-card reveal">
+                    <span class="hobby-icon">${item.icon}</span>
+                    <h3>${item.title}</h3>
+                    <p>${item.desc}</p>
+                </div>
+            `).join('');
+
+            // 正在做的事
+            document.getElementById('works-title').innerHTML = `<span class="icon">${CONFIG.works.icon}</span>${CONFIG.works.title}`;
+            document.getElementById('works-subtitle').textContent = CONFIG.works.subtitle;
+            document.getElementById('works-grid').innerHTML = CONFIG.works.items.map(item => `
+                <div class="work-card reveal">
+                    <span class="work-number">${item.number}</span>
+                    <h3>${item.title}</h3>
+                    <p>${item.desc}</p>
+                    <span class="work-tag">${item.tag}</span>
+                </div>
+            `).join('');
+
+            // 我能提供
+            document.getElementById('services-title').innerHTML = `<span class="icon">${CONFIG.services.icon}</span>${CONFIG.services.title}`;
+            document.getElementById('services-subtitle').textContent = CONFIG.services.subtitle;
+            document.getElementById('services-grid').innerHTML = CONFIG.services.items.map(item => `
+                <div class="service-card reveal">
+                    <div class="service-icon">${item.icon}</div>
+                    <h3>${item.title}</h3>
+                    <p>${item.desc}</p>
+                </div>
+            `).join('');
+
+            // 价值观
+            document.getElementById('values-title').innerHTML = `<span class="icon">${CONFIG.values.icon}</span>${CONFIG.values.title}`;
+            document.getElementById('values-subtitle').textContent = CONFIG.values.subtitle;
+            document.getElementById('values-cloud').innerHTML = CONFIG.values.tags.map(tag => 
+                `<span class="value-tag reveal">${tag}</span>`
+            ).join('');
+
+            // 联系方式
+            document.getElementById('contact-title').innerHTML = `<span class="icon">${CONFIG.contact.icon}</span>${CONFIG.contact.title}`;
+            document.getElementById('contact-subtitle').textContent = CONFIG.contact.subtitle;
+            document.getElementById('contact-grid').innerHTML = CONFIG.contact.items.map((item, index) => {
+                const qrId = `qr-${index}`;
+                if (item.type === 'email') {
+                    return `
+                        <div class="contact-card reveal" onclick="copyToClipboard('${item.value}', '${item.title}')">
+                            <div class="contact-icon">${item.icon}</div>
+                            <h3>${item.title}</h3>
+                            <p>${item.value}</p>
+                            <span class="copy-hint">${item.hint}</span>
+                        </div>
+                    `;
+                } else {
+                    return `
+                        <div class="contact-card reveal" onclick="toggleQR('${qrId}', event)">
+                            <div class="contact-icon">${item.icon}</div>
+                            <h3>${item.title}</h3>
+                            <p>${item.value}</p>
+                            <span class="qr-toggle-hint">${item.hint}</span>
+                            <div class="qr-content" id="${qrId}" onclick="event.stopPropagation()">
+                                <img src="${item.qrImage}" alt="${item.title}二维码">
+                                <p>${item.qrTip}</p>
+                                <span class="qr-close-hint" onclick="toggleQR('${qrId}', event)">点击收起</span>
+                            </div>
+                        </div>
+                    `;
+                }
+            }).join('');
+
+            // Footer
+            document.getElementById('footer-text').innerHTML = 
+                `${CONFIG.footer.text} <span class="heart">${CONFIG.footer.heart}</span> ${CONFIG.footer.author} | ${CONFIG.footer.year}`;
+
+            // 重新绑定导航点击事件
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // 重新初始化滚动动画观察器
+            const newRevealElements = document.querySelectorAll('.reveal');
+            newRevealElements.forEach(el => revealObserver.observe(el));
+        }
+
+        // 页面加载完成后执行
+        loadConfig();
     </script>
 </body>
 </html>
