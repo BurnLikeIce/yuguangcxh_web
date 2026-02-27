@@ -28,6 +28,7 @@ const CONFIG = {
         subtitle: "用AI探索未来，用魔术治愈心灵",
         tags: [
             { text: "36x.ai联合创始人", primary: true },
+            { text: "艺镜探索联合主理人", primary: false },
             { text: "心理咨询师", primary: false },
             { text: "魔术师", primary: false }
         ]
@@ -86,24 +87,30 @@ const CONFIG = {
             },
             {
                 number: "02",
+                title: "🎨 艺镜探索联合主理人",
+                desc: "专注于AI内容创作与探索，打造AI艺术与设计的新可能。",
+                tag: "AI创作"
+            },
+            {
+                number: "03",
                 title: "✍️ 个人品牌探索",
                 desc: "运营公众号《屿光同行》，记录自己的想法和感悟，与更多人分享成长路上的思考。",
                 tag: "创作"
             },
             {
-                number: "03",
+                number: "04",
                 title: "🎭 心灵魔术活动",
                 desc: "将心理学融入魔术，筹备个人魔术疗愈秀，正在寻找合作方，希望用独特的方式治愈心灵。",
                 tag: "创新项目"
             },
             {
-                number: "04",
+                number: "05",
                 title: "🤝 社交与连接",
                 desc: "积极参加各类活动，广交朋友，不断扩大交际圈和人脉，持续提升社交能力。",
                 tag: "成长"
             },
             {
-                number: "05",
+                number: "06",
                 title: "🌟 帮助迷茫的年轻人",
                 desc: "想要帮助在大城市的迷茫年轻人疗愈内心，找到未来方向，用AI赋能成为超级个体。",
                 tag: "使命"
