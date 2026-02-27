@@ -185,10 +185,10 @@
         /* Badge 容器 - 放在照片区域下半部分 */
         .hero-badge-container {
             position: absolute;
-            top: 44vh;
+            top: 42vh;
             left: 0;
             width: 100%;
-            z-index: 5;
+            z-index: 20;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -373,6 +373,13 @@
             justify-content: center;
             gap: 15px;
             animation: fadeInUp 0.8s ease-out 0.3s both;
+            max-width: 500px;
+        }
+
+        .hero-tags .hero-tag {
+            flex: 0 0 calc(50% - 10px);
+            text-align: center;
+            white-space: nowrap;
         }
 
         .hero-tag {
@@ -1356,8 +1363,8 @@
             document.getElementById('logo').textContent = CONFIG.logo;
 
             // 导航链接
-            const navLinks = document.getElementById('navLinks');
-            navLinks.innerHTML = CONFIG.nav.links.map(link => 
+            const navLinksContainer = document.getElementById('navLinks');
+            navLinksContainer.innerHTML = CONFIG.nav.links.map(link => 
                 `<a href="#${link.id}">${link.text}</a>`
             ).join('');
 
@@ -1458,7 +1465,7 @@
             // 重新绑定导航点击事件
             document.querySelectorAll('.nav-links a').forEach(link => {
                 link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
+                    document.getElementById('navLinks').classList.remove('active');
                 });
             });
 
